@@ -1,0 +1,26 @@
+#%Module#######################################################
+
+set version 3.3.4
+proc ModulesHelp { } {
+     puts stderr "This module provides the FFTW-3 library for calculating" 
+     puts stderr "the discrete Fourier transform in one or more"  
+     puts stderr "It updates the environment variables \$CPATH, \ puts \$LIBRARY_PATH and \$INFOPATH accordingly."
+     puts stderr ""
+     puts stderr "The following variables are defined for use in Makefiles:" 
+     puts stderr ""
+     puts stderr "\$FFTW3_DIR, \$FFTW3_BIN, \$FFTW3_INC, \$FFTW3_LIB"
+     puts stderr ""
+}
+
+module-whatis "FFTW-3 fast Fourier transform numerical library"
+set prefix  /opt/fftw3
+prepend-path CPATH  ${prefix}/include 
+
+prepend-path    LIBRARY_PATH    ${prefix}/lib
+prepend-path    MANPATH         ${prefix}/share/man
+prepend-path    INFOPATH        ${prefix}/share/info
+
+setenv FFTW3_DIR  ${prefix}
+setenv FFTW3_BIN  ${prefix}/bin
+setenv FFTW3_LIB  ${prefix}/lib
+setenv FFTW3_INC  ${prefix}/include
