@@ -6,5 +6,5 @@
 #
 #date
 #/usr/bin/openssl speed
-mpirun -np 2 Diffusion_serial_code/diffusion.x 
+mpirun -np 2 diffusion.x 
 #date
