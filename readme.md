@@ -16,7 +16,7 @@ make clean
   - make
   - make install
 6. Set the prefix in file fftw according to installation path (/opt/fftw3)
-7. mv fftw to modulefiles (/usr/share/Module/modulefiles)
+7. Move fftw to modulefiles path (/usr/share/Module/modulefiles)
 8. Compile job
   - make all
 9. Load module >> module load fftw3
